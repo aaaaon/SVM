@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jbit.dao.HostDao">
+  <resultMap id="BaseResultMap" type="com.jbit.entity.Host">
+    <id column="Host" jdbcType="CHAR" property="host" />
+    <id column="Db" jdbcType="CHAR" property="db" />
+    <result column="Select_priv" jdbcType="CHAR" property="selectPriv" />
+    <result column="Insert_priv" jdbcType="CHAR" property="insertPriv" />
+    <result column="Update_priv" jdbcType="CHAR" property="updatePriv" />
+    <result column="Delete_priv" jdbcType="CHAR" property="deletePriv" />
+    <result column="Create_priv" jdbcType="CHAR" property="createPriv" />
+    <result column="Drop_priv" jdbcType="CHAR" property="dropPriv" />
+    <result column="Grant_priv" jdbcType="CHAR" property="grantPriv" />
+    <result column="References_priv" jdbcType="CHAR" property="referencesPriv" />
+    <result column="Index_priv" jdbcType="CHAR" property="indexPriv" />
+    <result column="Alter_priv" jdbcType="CHAR" property="alterPriv" />
+    <result column="Create_tmp_table_priv" jdbcType="CHAR" property="createTmpTablePriv" />
+    <result column="Lock_tables_priv" jdbcType="CHAR" property="lockTablesPriv" />
+    <result column="Create_view_priv" jdbcType="CHAR" property="createViewPriv" />
+    <result column="Show_view_priv" jdbcType="CHAR" property="showViewPriv" />
+    <result column="Create_routine_priv" jdbcType="CHAR" property="createRoutinePriv" />
+    <result column="Alter_routine_priv" jdbcType="CHAR" property="alterRoutinePriv" />
+    <result column="Execute_priv" jdbcType="CHAR" property="executePriv" />
+    <result column="Trigger_priv" jdbcType="CHAR" property="triggerPriv" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    Host, Db, Select_priv, Insert_priv, Update_priv, Delete_priv, Create_priv, Drop_priv, 
+    Grant_priv, References_priv, Index_priv, Alter_priv, Create_tmp_table_priv, Lock_tables_priv, 
+    Create_view_priv, Show_view_priv, Create_routine_priv, Alter_routine_priv, Execute_priv, 
+    Trigger_priv
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="com.jbit.entity.HostKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from host
+    where Host = #{host,jdbcType=CHAR}
+      and Db = #{db,jdbcType=CHAR}
+  </select>
+</mapper>

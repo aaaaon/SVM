@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jbit.dao.NdbBinlogIndexDao">
+  <resultMap id="BaseResultMap" type="com.jbit.entity.NdbBinlogIndex">
+    <id column="epoch" jdbcType="BIGINT" property="epoch" />
+    <result column="Position" jdbcType="BIGINT" property="position" />
+    <result column="File" jdbcType="VARCHAR" property="file" />
+    <result column="inserts" jdbcType="BIGINT" property="inserts" />
+    <result column="updates" jdbcType="BIGINT" property="updates" />
+    <result column="deletes" jdbcType="BIGINT" property="deletes" />
+    <result column="schemaops" jdbcType="BIGINT" property="schemaops" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    epoch, Position, File, inserts, updates, deletes, schemaops
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ndb_binlog_index
+    where epoch = #{epoch,jdbcType=BIGINT}
+  </select>
+</mapper>
