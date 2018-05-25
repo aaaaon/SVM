@@ -10,7 +10,30 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	</typeAliases>
 	
 	<mappers>
-		<mapper resource="com/jbit/dao/BbsDetailMapper.xml" />
-		<mapper resource="com/jbit/dao/BbsSortMapper.xml" />
+		<mapper resource="com/jbit/dao/ColumnsPrivMapper.xml" />
+		<mapper resource="com/jbit/dao/DbMapper.xml" />
+		<mapper resource="com/jbit/dao/EventMapper.xml" />
+		<mapper resource="com/jbit/dao/FuncMapper.xml" />
+		<mapper resource="com/jbit/dao/GeneralLogMapper.xml" />
+		<mapper resource="com/jbit/dao/HelpCategoryMapper.xml" />
+		<mapper resource="com/jbit/dao/HelpKeywordMapper.xml" />
+		<mapper resource="com/jbit/dao/HelpRelationMapper.xml" />
+		<mapper resource="com/jbit/dao/HelpTopicMapper.xml" />
+		<mapper resource="com/jbit/dao/HostMapper.xml" />
+		<mapper resource="com/jbit/dao/NdbBinlogIndexMapper.xml" />
+		<mapper resource="com/jbit/dao/PluginMapper.xml" />
+		<mapper resource="com/jbit/dao/ProcMapper.xml" />
+		<mapper resource="com/jbit/dao/ProcsPrivMapper.xml" />
+		<mapper resource="com/jbit/dao/ProxiesPrivMapper.xml" />
+		<mapper resource="com/jbit/dao/ServersMapper.xml" />
+		<mapper resource="com/jbit/dao/SlowLogMapper.xml" />
+		<mapper resource="com/jbit/dao/TablesPrivMapper.xml" />
+		<mapper resource="com/jbit/dao/TimeZoneLeapSecondMapper.xml" />
+		<mapper resource="com/jbit/dao/TimeZoneMapper.xml" />
+		<mapper resource="com/jbit/dao/TimeZoneNameMapper.xml" />
+		<mapper resource="com/jbit/dao/TimeZoneTransitionMapper.xml" />
+		<mapper resource="com/jbit/dao/TimeZoneTransitionTypeMapper.xml" />
+		<mapper resource="com/jbit/dao/UserMapper.xml" />
+		
 	</mappers>
 </configuration>
