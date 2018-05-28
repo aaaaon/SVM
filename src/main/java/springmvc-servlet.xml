@@ -19,7 +19,8 @@
 	
 	<mvc:annotation-driven />
 	
-	<mvc:resources location="/css/" mapping="/css/**"/>
+	<mvc:resources location="/statics/" mapping="/statics/**"/>
+	<mvc:resources location="/pages/" mapping="/pages/**"/>
 	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 	   <property name="prefix" value="/"></property>
